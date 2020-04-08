@@ -35,6 +35,8 @@ body,
   .client {
     /*Custom attribs*/
     width: 200px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 
     /* filter: url(filters.svg#grayscale); Firefox 3.5+ */
       filter: gray; /* IE5+ */
@@ -51,4 +53,8 @@ body,
 
     html {
       scroll-behavior: smooth;
+    }
+
+    #centrado{
+      
     }
