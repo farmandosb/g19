@@ -15,7 +15,7 @@ body,
 
 /* Navbar animation */
 .navbar {
-   background-color: rgba(0, 0, 0, 0.2); }
+  background-color: rgba(0, 0, 0, 0.2); }
 
 .top-nav-collapse {
   background-color: #1C2331; }
@@ -30,6 +30,20 @@ body,
   background-color: #1C2331; }
 
 
-element.style {
-    padding-right: px;
-}
+  /*Change image color on hover*/
+
+  .client {
+    /*Custom attribs*/
+    width: 200px;
+
+    /* filter: url(filters.svg#grayscale); Firefox 3.5+ */
+      filter: gray; /* IE5+ */
+      -webkit-filter: grayscale(1); /* Webkit Nightlies & Chrome Canary */
+      -webkit-transition: all .5s ease-in-out;  
+    }
+
+    .client:hover {
+    filter: none;
+      -webkit-filter: grayscale(0);
+      -webkit-transform: scale(1.01);
+    }
