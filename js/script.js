@@ -6,10 +6,22 @@ let navbar = document.querySelector("#navbar");
 let modalActive = false;
 
 
+navwhatsapp.addEventListener("click", (e)=>{
+    e.preventDefault();
+    showmodal();
+});
 
-navwhatsapp.addEventListener("mouseenter", () => {
+
+
+navwhatsapp.addEventListener("mouseenter", showmodal());
+
+
+function showmodal(e){
     if (!modalActive) {
-        $('#sideModalTR').modal('show');
+        setTimeout(()=>{
+            $('#sideModalTR').modal('show');
+        }, 3000);
+       
         // When the modal is shown, we want a fixed body
         
    
@@ -20,8 +32,8 @@ navwhatsapp.addEventListener("mouseenter", () => {
 
 
     console.log("mouseenter");
-});
-
+};
+/*
 navwhatsapp.addEventListener("mouseleave", () => {
     $('#sideModalTR').modal('hide');
     modalActive = false;
@@ -32,7 +44,7 @@ navwhatsapp.addEventListener("mouseleave", () => {
     window.scrollTo(0, parseInt(scrollY || '0') * -1);
 
     console.log("mouseleave");
-});
+});*/
 
 console.log(navwhatsapp);
 
